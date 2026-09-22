@@ -48,97 +48,127 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
  .label{width:165px}
 }
 @media print{
-  @page{size:A4 portrait;margin:5mm}
-  html,body{width:210mm;height:297mm;background:#fff}
-  body{font-size:9pt}
-  .wrap{
-    width:200mm;
-    max-width:200mm;
-    margin:0 auto;
-    padding:0;
-    border:0;
+  @page { size: A4 portrait; margin: 4mm; }
+
+  html, body {
+    width: 210mm !important;
+    height: 297mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
-  .header{
-    gap:6px;
-    padding-bottom:5px;
-    border-bottom-width:1px;
+
+  body { font-size: 7.7pt !important; }
+
+  .wrap {
+    width: 202mm !important;
+    max-width: 202mm !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border: 0 !important;
   }
-  .header .right,.header .left{
-    line-height:1.35;
-    font-size:8.5pt;
+
+  .header {
+    grid-template-columns: 1fr .85fr 1fr !important;
+    gap: 3mm !important;
+    padding-bottom: 2mm !important;
+    border-bottom-width: 1px !important;
   }
-  .logo{font-size:16pt;line-height:1}
-  .logo small{font-size:7pt}
-  .title{
-    margin:5px 0;
-    padding:5px;
-    border-radius:6px;
-    font-size:16pt;
+  .header .right, .header .left {
+    font-size: 7.5pt !important;
+    line-height: 1.25 !important;
   }
-  .section{
-    margin-top:5px;
-    border-radius:5px;
-    break-inside:avoid;
+  .header-row { gap: 1mm !important; }
+  .header-row input {
+    width: 24mm !important;
+    height: 4.5mm !important;
+    font-size: 7.2pt !important;
+    padding: 0 !important;
   }
-  .section h2{
-    padding:4px 7px;
-    font-size:11pt;
+  .logo { font-size: 14pt !important; line-height: 1 !important; }
+  .logo small { font-size: 6pt !important; }
+
+  .title {
+    margin: 2mm 0 1.5mm !important;
+    padding: 2mm !important;
+    border-radius: 3mm !important;
+    font-size: 14pt !important;
+    line-height: 1.05 !important;
   }
-  td,th{
-    padding:3px 4px;
-    font-size:8.3pt;
-    line-height:1.15;
+
+  .section {
+    margin-top: 1.4mm !important;
+    border-radius: 2mm !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
-  .label{width:42mm}
-  input,textarea{
-    padding:1px 2px;
-    font-size:8.3pt;
+
+  .section h2 {
+    padding: 1.2mm 2mm !important;
+    font-size: 9pt !important;
+    line-height: 1.05 !important;
   }
-  textarea{
-    min-height:28px !important;
-    line-height:1.25;
-    resize:none;
+
+  table { table-layout: fixed !important; }
+  td, th {
+    padding: 0.7mm 1mm !important;
+    font-size: 7.2pt !important;
+    line-height: 1.05 !important;
   }
-  .big textarea{
-    min-height:38px !important;
-    height:38px !important;
+  .label { width: 39mm !important; }
+
+  input, textarea {
+    font-size: 7.2pt !important;
+    padding: 0 !important;
+    line-height: 1.05 !important;
   }
-  .attendees td,.attendees th{
-    padding:2px 3px;
-    height:18px;
+
+  .big textarea {
+    min-height: 17mm !important;
+    height: 17mm !important;
+    max-height: 17mm !important;
+    overflow: hidden !important;
+    resize: none !important;
   }
-  .attendees input{
-    min-height:14px;
-    height:14px;
-    padding:0;
+
+  .attendees th, .attendees td {
+    height: 5.2mm !important;
+    padding: 0.3mm 0.7mm !important;
   }
-  .approval{
-    grid-template-columns:1fr 34mm 1fr;
-    gap:6px;
-    padding:6px;
+  .attendees input {
+    min-height: 3.5mm !important;
+    height: 3.5mm !important;
+    padding: 0 !important;
   }
-  .sig{
-    padding:3px;
-    font-size:8.3pt;
+
+  .approval {
+    grid-template-columns: 1fr 28mm 1fr !important;
+    gap: 2mm !important;
+    padding: 2mm !important;
   }
-  .sig input{
-    margin-top:3px;
+  .sig {
+    padding: 0.8mm !important;
+    font-size: 7.2pt !important;
+    line-height: 1.1 !important;
   }
-  .stamp{
-    border-radius:4px;
-    font-size:8.3pt;
+  .sig input {
+    margin-top: 1mm !important;
+    height: 4mm !important;
   }
-  .footer{
-    margin-top:5px;
-    font-size:7pt;
+  .stamp {
+    border-radius: 2mm !important;
+    font-size: 7.2pt !important;
   }
-  .actions,.note{display:none!important}
-}
- .wrap{border:0;margin:0;max-width:none;padding:8mm}
- .actions,.note{display:none}
- input,textarea{padding:0}
- textarea{min-height:100px}
- .section{break-inside:avoid}
+
+  .footer {
+    margin-top: 1.5mm !important;
+    font-size: 6.5pt !important;
+    line-height: 1 !important;
+  }
+
+  .actions, .note { display: none !important; }
 }
 </style>
 </head>
