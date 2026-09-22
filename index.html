@@ -48,7 +48,92 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
  .label{width:165px}
 }
 @media print{
- body{background:#fff}
+  @page{size:A4 portrait;margin:5mm}
+  html,body{width:210mm;height:297mm;background:#fff}
+  body{font-size:9pt}
+  .wrap{
+    width:200mm;
+    max-width:200mm;
+    margin:0 auto;
+    padding:0;
+    border:0;
+  }
+  .header{
+    gap:6px;
+    padding-bottom:5px;
+    border-bottom-width:1px;
+  }
+  .header .right,.header .left{
+    line-height:1.35;
+    font-size:8.5pt;
+  }
+  .logo{font-size:16pt;line-height:1}
+  .logo small{font-size:7pt}
+  .title{
+    margin:5px 0;
+    padding:5px;
+    border-radius:6px;
+    font-size:16pt;
+  }
+  .section{
+    margin-top:5px;
+    border-radius:5px;
+    break-inside:avoid;
+  }
+  .section h2{
+    padding:4px 7px;
+    font-size:11pt;
+  }
+  td,th{
+    padding:3px 4px;
+    font-size:8.3pt;
+    line-height:1.15;
+  }
+  .label{width:42mm}
+  input,textarea{
+    padding:1px 2px;
+    font-size:8.3pt;
+  }
+  textarea{
+    min-height:28px !important;
+    line-height:1.25;
+    resize:none;
+  }
+  .big textarea{
+    min-height:38px !important;
+    height:38px !important;
+  }
+  .attendees td,.attendees th{
+    padding:2px 3px;
+    height:18px;
+  }
+  .attendees input{
+    min-height:14px;
+    height:14px;
+    padding:0;
+  }
+  .approval{
+    grid-template-columns:1fr 34mm 1fr;
+    gap:6px;
+    padding:6px;
+  }
+  .sig{
+    padding:3px;
+    font-size:8.3pt;
+  }
+  .sig input{
+    margin-top:3px;
+  }
+  .stamp{
+    border-radius:4px;
+    font-size:8.3pt;
+  }
+  .footer{
+    margin-top:5px;
+    font-size:7pt;
+  }
+  .actions,.note{display:none!important}
+}
  .wrap{border:0;margin:0;max-width:none;padding:8mm}
  .actions,.note{display:none}
  input,textarea{padding:0}
@@ -149,7 +234,7 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
 
   <div class="footer">
     <span>إعداد/ د. فاطمة الثنيان</span>
-    <span>مستمرون في التطوير.. لصناعة فرق في تعلم طالباتنا</span>
+    <span>مستمرون في التطوير.. لصناعة الفرق</span>
   </div>
 
   <div class="actions">
