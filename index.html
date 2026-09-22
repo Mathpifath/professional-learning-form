@@ -5,173 +5,270 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>نموذج تنفيذ مجتمع التعلم المهني</title>
 <style>
-:root{--navy:#0d3b66;--blue:#dff2fb;--mint:#dff3e7;--line:#6aaed6;--teal:#1f9d8a;}
+:root{
+  --navy:#0d3b66;
+  --blue:#dff2fb;
+  --mint:#dff3e7;
+  --line:#6aaed6;
+  --teal:#1f9d8a;
+}
 *{box-sizing:border-box}
-body{margin:0;background:#f4f7f9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;color:#0f2f57}
-.wrap{max-width:980px;margin:24px auto;background:#fff;padding:24px;border:1px solid #d8e6ef}
-.header{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:start;gap:16px;border-bottom:2px solid var(--navy);padding-bottom:14px}
+body{
+  margin:0;
+  background:#f4f7f9;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;
+  color:#0f2f57;
+}
+.wrap{
+  max-width:980px;
+  margin:24px auto;
+  background:#fff;
+  padding:24px;
+  border:1px solid #d8e6ef;
+}
+.header{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  align-items:start;
+  gap:16px;
+  border-bottom:2px solid var(--navy);
+  padding-bottom:14px;
+}
 .header .right{text-align:right;line-height:1.7;font-weight:700}
 .header .left{text-align:left;line-height:1.9;font-weight:700}
-.header-row{display:flex;justify-content:flex-start;align-items:center;gap:8px;direction:rtl}
-.header-row input{width:150px;border:0;border-bottom:1px dotted #789;background:#fff;text-align:center;padding:2px 4px}
-.logo{text-align:center;color:var(--teal);font-weight:800;font-size:28px;line-height:1.2}
+.header-row{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  gap:8px;
+  direction:rtl;
+}
+.header-row input{
+  width:150px;
+  border:0;
+  border-bottom:1px dotted #789;
+  background:#fff;
+  text-align:center;
+  padding:2px 4px;
+}
+.logo{
+  text-align:center;
+  color:var(--teal);
+  font-weight:800;
+  font-size:28px;
+  line-height:1.2
+}
 .logo small{display:block;color:#607d8b;font-size:14px;font-weight:500}
-.title{margin:18px 0 14px;background:linear-gradient(90deg,var(--blue),#eaf7fc,var(--blue));border-radius:14px;padding:14px;text-align:center;font-size:30px;font-weight:800;color:var(--navy)}
-.section{margin-top:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.section h2{margin:0;padding:10px 14px;background:linear-gradient(90deg,var(--mint),#eaf8ef);font-size:20px;color:var(--navy)}
+.title{
+  margin:18px 0 14px;
+  background:linear-gradient(90deg,var(--blue),#eaf7fc,var(--blue));
+  border-radius:14px;
+  padding:14px;
+  text-align:center;
+  font-size:30px;
+  font-weight:800;
+  color:var(--navy)
+}
+.section{
+  margin-top:14px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+}
+.section h2{
+  margin:0;
+  padding:10px 14px;
+  background:linear-gradient(90deg,var(--mint),#eaf8ef);
+  font-size:20px;
+  color:var(--navy)
+}
 table{width:100%;border-collapse:collapse}
 td,th{border:1px solid #a8cce2;padding:9px;vertical-align:middle}
 th{background:#edf8fc}
 .label{width:230px;background:#eaf6fb;font-weight:700}
-input,textarea{width:100%;border:0;outline:0;font:inherit;background:#fff;padding:6px;color:#163c5f}
+input,textarea{
+  width:100%;
+  border:0;
+  outline:0;
+  font:inherit;
+  background:#fff;
+  padding:6px;
+  color:#163c5f
+}
 textarea{min-height:120px;resize:vertical;line-height:1.8}
 .big textarea{min-height:145px}
 .attendees input{text-align:center;min-height:30px}
-.approval{display:grid;grid-template-columns:1fr 180px 1fr;gap:16px;align-items:stretch;padding:16px}
+.approval{
+  display:grid;
+  grid-template-columns:1fr 180px 1fr;
+  gap:16px;
+  align-items:stretch;
+  padding:16px
+}
 .sig{padding:10px;text-align:center;font-weight:700}
 .sig input{border-bottom:1px dotted #4e88b0;margin-top:10px;text-align:center}
-.stamp{display:flex;align-items:center;justify-content:center;background:#e8f6fc;border-radius:8px;font-weight:700}
-.actions{display:flex;gap:10px;justify-content:center;margin:22px 0 4px;flex-wrap:wrap}
-.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:700;cursor:pointer}
+.stamp{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#e8f6fc;
+  border-radius:8px;
+  font-weight:700
+}
+.actions{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin:22px 0 4px;
+  flex-wrap:wrap;
+}
+.btn{
+  border:0;
+  border-radius:10px;
+  padding:12px 18px;
+  font-weight:700;
+  cursor:pointer;
+  font-size:15px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+}
 .primary{background:#0b84c6;color:#fff}
 .secondary{background:#e9f5f1;color:#0f5b50}
 .danger{background:#f5ecec;color:#8b2f2f}
 .note{text-align:center;color:#47738f;font-size:13px;margin-top:8px}
-.footer{display:flex;justify-content:space-between;gap:14px;margin-top:16px;font-size:13px;color:#2b5473}
-@media(max-width:720px){
- .wrap{margin:0;padding:12px}
- .header{grid-template-columns:1fr}
- .header .left,.header .right,.logo{text-align:center}
- .header-row{justify-content:center}
- .approval{grid-template-columns:1fr}
- .title{font-size:24px}
- .label{width:165px}
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  margin-top:16px;
+  font-size:13px;
+  color:#2b5473
 }
+
+@media(max-width:720px){
+  .wrap{margin:0;padding:12px}
+  .header{grid-template-columns:1fr}
+  .header .left,.header .right,.logo{text-align:center}
+  .header-row{justify-content:center}
+  .approval{grid-template-columns:1fr}
+  .title{font-size:24px}
+  .label{width:165px}
+}
+
+/* الطباعة فقط */
 @media print{
-  @page { size: A4 portrait; margin: 4mm; }
-
-  html, body {
-    width: 210mm !important;
-    height: 297mm !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #fff !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+  @page{size:A4 portrait;margin:4mm}
+  html,body{
+    width:210mm !important;
+    height:297mm !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:#fff !important;
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
   }
-
-  body { font-size: 7.7pt !important; }
-
-  .wrap {
-    width: 202mm !important;
-    max-width: 202mm !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    border: 0 !important;
+  body{font-size:7.5pt !important}
+  .wrap{
+    width:202mm !important;
+    max-width:202mm !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    border:0 !important;
   }
-
-  .header {
-    grid-template-columns: 1fr .85fr 1fr !important;
-    gap: 3mm !important;
-    padding-bottom: 2mm !important;
-    border-bottom-width: 1px !important;
+  .header{
+    grid-template-columns:1fr .85fr 1fr !important;
+    gap:3mm !important;
+    padding-bottom:1.5mm !important;
+    border-bottom-width:1px !important;
   }
-  .header .right, .header .left {
-    font-size: 7.5pt !important;
-    line-height: 1.25 !important;
+  .header .right,.header .left{
+    font-size:7.3pt !important;
+    line-height:1.2 !important;
   }
-  .header-row { gap: 1mm !important; }
-  .header-row input {
-    width: 24mm !important;
-    height: 4.5mm !important;
-    font-size: 7.2pt !important;
-    padding: 0 !important;
+  .header-row{gap:1mm !important}
+  .header-row input{
+    width:24mm !important;
+    height:4mm !important;
+    font-size:7pt !important;
+    padding:0 !important;
   }
-  .logo { font-size: 14pt !important; line-height: 1 !important; }
-  .logo small { font-size: 6pt !important; }
-
-  .title {
-    margin: 2mm 0 1.5mm !important;
-    padding: 2mm !important;
-    border-radius: 3mm !important;
-    font-size: 14pt !important;
-    line-height: 1.05 !important;
+  .logo{font-size:13pt !important;line-height:1 !important}
+  .logo small{font-size:5.8pt !important}
+  .title{
+    margin:1.5mm 0 1mm !important;
+    padding:1.6mm !important;
+    border-radius:2mm !important;
+    font-size:13pt !important;
+    line-height:1 !important;
   }
-
-  .section {
-    margin-top: 1.4mm !important;
-    border-radius: 2mm !important;
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
+  .section{
+    margin-top:1mm !important;
+    border-radius:1.5mm !important;
+    break-inside:avoid !important;
+    page-break-inside:avoid !important;
   }
-
-  .section h2 {
-    padding: 1.2mm 2mm !important;
-    font-size: 9pt !important;
-    line-height: 1.05 !important;
+  .section h2{
+    padding:1mm 1.5mm !important;
+    font-size:8.6pt !important;
+    line-height:1 !important;
   }
-
-  table { table-layout: fixed !important; }
-  td, th {
-    padding: 0.7mm 1mm !important;
-    font-size: 7.2pt !important;
-    line-height: 1.05 !important;
+  table{table-layout:fixed !important}
+  td,th{
+    padding:.55mm .8mm !important;
+    font-size:7pt !important;
+    line-height:1 !important;
   }
-  .label { width: 39mm !important; }
-
-  input, textarea {
-    font-size: 7.2pt !important;
-    padding: 0 !important;
-    line-height: 1.05 !important;
+  .label{width:38mm !important}
+  input,textarea{
+    font-size:7pt !important;
+    padding:0 !important;
+    line-height:1 !important;
   }
-
-  .big textarea {
-    min-height: 17mm !important;
-    height: 17mm !important;
-    max-height: 17mm !important;
-    overflow: hidden !important;
-    resize: none !important;
+  .big textarea{
+    min-height:14mm !important;
+    height:14mm !important;
+    max-height:14mm !important;
+    overflow:hidden !important;
+    resize:none !important;
   }
-
-  .attendees th, .attendees td {
-    height: 5.2mm !important;
-    padding: 0.3mm 0.7mm !important;
+  .attendees th,.attendees td{
+    height:4.6mm !important;
+    padding:.2mm .6mm !important;
   }
-  .attendees input {
-    min-height: 3.5mm !important;
-    height: 3.5mm !important;
-    padding: 0 !important;
+  .attendees input{
+    min-height:3mm !important;
+    height:3mm !important;
+    padding:0 !important;
   }
-
-  .approval {
-    grid-template-columns: 1fr 28mm 1fr !important;
-    gap: 2mm !important;
-    padding: 2mm !important;
+  .approval{
+    grid-template-columns:1fr 26mm 1fr !important;
+    gap:1.5mm !important;
+    padding:1.5mm !important;
   }
-  .sig {
-    padding: 0.8mm !important;
-    font-size: 7.2pt !important;
-    line-height: 1.1 !important;
+  .sig{
+    padding:.5mm !important;
+    font-size:7pt !important;
+    line-height:1 !important;
   }
-  .sig input {
-    margin-top: 1mm !important;
-    height: 4mm !important;
+  .sig input{
+    margin-top:.7mm !important;
+    height:3.5mm !important;
   }
-  .stamp {
-    border-radius: 2mm !important;
-    font-size: 7.2pt !important;
+  .stamp{
+    border-radius:1.5mm !important;
+    font-size:7pt !important;
   }
-
-  .footer {
-    margin-top: 1.5mm !important;
-    font-size: 6.5pt !important;
-    line-height: 1 !important;
+  .footer{
+    margin-top:1mm !important;
+    font-size:6.2pt !important;
+    line-height:1 !important;
   }
-
-  .actions, .note { display: none !important; }
+  .actions,.note{display:none !important}
 }
 </style>
 </head>
+
 <body>
 <div class="wrap">
   <div class="header">
@@ -190,11 +287,11 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
       ثانوية حفصة بنت سيرين
       <div class="header-row">
         <span>الفصل الدراسي:</span>
-        <input id="term" placeholder="اكتبي الفصل">
+        <input id="term">
       </div>
       <div class="header-row">
         <span>العام:</span>
-        <input id="year" placeholder="مثال: 1448هـ">
+        <input id="year">
       </div>
     </div>
   </div>
@@ -268,41 +365,41 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
   </div>
 
   <div class="actions">
-    <button class="btn primary" onclick="window.print()">طباعة / حفظ PDF</button>
-    <button class="btn secondary" onclick="saveNow()">حفظ البيانات على الجهاز</button>
-    <button class="btn danger" onclick="clearAll()">مسح البيانات</button>
+    <button class="btn primary" onclick="window.print()">🖨️ طباعة / حفظ PDF</button>
+    <button class="btn secondary" onclick="saveNow()">💾 حفظ البيانات</button>
+    <button class="btn danger" onclick="clearAll()">🗑️ مسح البيانات</button>
   </div>
-  <div class="note">يحفظ النموذج البيانات محليًا على نفس الجهاز والمتصفح فقط.</div>
+  <div class="note">يفتح النموذج فارغًا. عند الضغط على «حفظ البيانات» تُحفظ نسخة مؤقتة على الجهاز نفسه فقط.</div>
 </div>
 
 <script>
 const ids=["term","year","topic","field","teacher","place","date","goals","discussion","results","execsig","mgrsig",
-"a_name_1","a_spec_1","a_sig_1","a_name_2","a_spec_2","a_sig_2","a_name_3","a_spec_3","a_sig_3","a_name_4","a_spec_4","a_sig_4","a_name_5","a_spec_5","a_sig_5",
-"a_name_6","a_spec_6","a_sig_6","a_name_7","a_spec_7","a_sig_7","a_name_8","a_spec_8","a_sig_8","a_name_9","a_spec_9","a_sig_9","a_name_10","a_spec_10","a_sig_10"];
+"a_name_1","a_spec_1","a_sig_1","a_name_2","a_spec_2","a_sig_2","a_name_3","a_spec_3","a_sig_3",
+"a_name_4","a_spec_4","a_sig_4","a_name_5","a_spec_5","a_sig_5","a_name_6","a_spec_6","a_sig_6",
+"a_name_7","a_spec_7","a_sig_7","a_name_8","a_spec_8","a_sig_8","a_name_9","a_spec_9","a_sig_9",
+"a_name_10","a_spec_10","a_sig_10"];
 
-function persist(){
- const d={};
- ids.forEach(id=>{const e=document.getElementById(id); if(e)d[id]=e.value});
- localStorage.setItem("plc_form_hafsa",JSON.stringify(d));
+function saveNow(){
+  const d={};
+  ids.forEach(id=>{
+    const e=document.getElementById(id);
+    if(e) d[id]=e.value;
+  });
+  localStorage.setItem("plc_form_hafsa_manual",JSON.stringify(d));
+  alert("تم حفظ البيانات على هذا الجهاز.");
 }
-function saveNow(){persist(); alert("تم حفظ البيانات على هذا الجهاز.");}
-function restore(){
- try{
-  const d=JSON.parse(localStorage.getItem("plc_form_hafsa")||"{}");
-  ids.forEach(id=>{const e=document.getElementById(id); if(e && d[id]!==undefined)e.value=d[id]});
- }catch(e){}
-}
+
 function clearAll(){
- if(confirm("هل تريدين مسح جميع البيانات من النموذج؟")){
-  localStorage.removeItem("plc_form_hafsa");
-  ids.forEach(id=>{const e=document.getElementById(id); if(e)e.value=""});
- }
+  if(confirm("هل تريدين مسح جميع البيانات من النموذج؟")){
+    ids.forEach(id=>{
+      const e=document.getElementById(id);
+      if(e) e.value="";
+    });
+    localStorage.removeItem("plc_form_hafsa_manual");
+  }
 }
-ids.forEach(id=>{
- const e=document.getElementById(id);
- if(e)e.addEventListener("input",persist);
-});
-restore();
+
+/* مهم: لا نسترجع أي بيانات محفوظة تلقائيًا عند فتح النموذج */
 </script>
 </body>
 </html>
