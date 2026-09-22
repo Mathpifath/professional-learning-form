@@ -10,65 +10,184 @@
 body{margin:0;background:#f4f7f9;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;color:#0f2f57}
 .wrap{max-width:980px;margin:24px auto;background:#fff;padding:24px;border:1px solid #d8e6ef}
 .header{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:start;gap:16px;border-bottom:2px solid var(--navy);padding-bottom:14px}
-.header .right{text-align:right;line-height:1.7;font-weight:700}.header .left{text-align:left;line-height:1.9;font-weight:700}
-.header-line{display:flex;justify-content:flex-start;align-items:center;gap:6px;direction:rtl}.header-line .dots{display:inline-block;min-width:110px;border-bottom:1px dotted #789;height:1.2em}
-.logo{text-align:center;color:var(--teal);font-weight:800;font-size:28px;line-height:1.2}.logo small{display:block;color:#607d8b;font-size:14px;font-weight:500}
+.header .right{text-align:right;line-height:1.7;font-weight:700}
+.header .left{text-align:left;line-height:1.9;font-weight:700}
+.header-row{display:flex;justify-content:flex-start;align-items:center;gap:8px;direction:rtl}
+.header-row input{width:150px;border:0;border-bottom:1px dotted #789;background:#fff;text-align:center;padding:2px 4px}
+.logo{text-align:center;color:var(--teal);font-weight:800;font-size:28px;line-height:1.2}
+.logo small{display:block;color:#607d8b;font-size:14px;font-weight:500}
 .title{margin:18px 0 14px;background:linear-gradient(90deg,var(--blue),#eaf7fc,var(--blue));border-radius:14px;padding:14px;text-align:center;font-size:30px;font-weight:800;color:var(--navy)}
-.section{margin-top:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden}.section h2{margin:0;padding:10px 14px;background:linear-gradient(90deg,var(--mint),#eaf8ef);font-size:20px;color:var(--navy)}
-table{width:100%;border-collapse:collapse}td,th{border:1px solid #a8cce2;padding:9px;vertical-align:middle}th{background:#edf8fc}.label{width:230px;background:#eaf6fb;font-weight:700}
-input,textarea{width:100%;border:0;outline:0;font:inherit;background:#fff;padding:6px;color:#163c5f}textarea{min-height:120px;resize:vertical;line-height:1.8}.big textarea{min-height:145px}.attendees input{text-align:center;min-height:30px}
-.approval{display:grid;grid-template-columns:1fr 180px 1fr;gap:16px;align-items:stretch;padding:16px}.sig{padding:10px;text-align:center;font-weight:700}.sig input{border-bottom:1px dotted #4e88b0;margin-top:10px;text-align:center}.stamp{display:flex;align-items:center;justify-content:center;background:#e8f6fc;border-radius:8px;font-weight:700}
-.actions{display:flex;gap:10px;justify-content:center;margin:22px 0 4px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:700;cursor:pointer}.primary{background:#0b84c6;color:#fff}.secondary{background:#e9f5f1;color:#0f5b50}.danger{background:#f5ecec;color:#8b2f2f}.note{text-align:center;color:#47738f;font-size:13px;margin-top:8px}.footer{display:flex;justify-content:space-between;gap:14px;margin-top:16px;font-size:13px;color:#2b5473}
-@media(max-width:720px){.wrap{margin:0;padding:12px}.header{grid-template-columns:1fr}.header .left,.header .right,.logo{text-align:center}.header-line{justify-content:center}.approval{grid-template-columns:1fr}.title{font-size:24px}.label{width:165px}}
-@media print{body{background:#fff}.wrap{border:0;margin:0;max-width:none;padding:8mm}.actions,.note{display:none}input,textarea{padding:0}textarea{min-height:100px}.section{break-inside:avoid}}
+.section{margin-top:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.section h2{margin:0;padding:10px 14px;background:linear-gradient(90deg,var(--mint),#eaf8ef);font-size:20px;color:var(--navy)}
+table{width:100%;border-collapse:collapse}
+td,th{border:1px solid #a8cce2;padding:9px;vertical-align:middle}
+th{background:#edf8fc}
+.label{width:230px;background:#eaf6fb;font-weight:700}
+input,textarea{width:100%;border:0;outline:0;font:inherit;background:#fff;padding:6px;color:#163c5f}
+textarea{min-height:120px;resize:vertical;line-height:1.8}
+.big textarea{min-height:145px}
+.attendees input{text-align:center;min-height:30px}
+.approval{display:grid;grid-template-columns:1fr 180px 1fr;gap:16px;align-items:stretch;padding:16px}
+.sig{padding:10px;text-align:center;font-weight:700}
+.sig input{border-bottom:1px dotted #4e88b0;margin-top:10px;text-align:center}
+.stamp{display:flex;align-items:center;justify-content:center;background:#e8f6fc;border-radius:8px;font-weight:700}
+.actions{display:flex;gap:10px;justify-content:center;margin:22px 0 4px;flex-wrap:wrap}
+.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:700;cursor:pointer}
+.primary{background:#0b84c6;color:#fff}
+.secondary{background:#e9f5f1;color:#0f5b50}
+.danger{background:#f5ecec;color:#8b2f2f}
+.note{text-align:center;color:#47738f;font-size:13px;margin-top:8px}
+.footer{display:flex;justify-content:space-between;gap:14px;margin-top:16px;font-size:13px;color:#2b5473}
+@media(max-width:720px){
+ .wrap{margin:0;padding:12px}
+ .header{grid-template-columns:1fr}
+ .header .left,.header .right,.logo{text-align:center}
+ .header-row{justify-content:center}
+ .approval{grid-template-columns:1fr}
+ .title{font-size:24px}
+ .label{width:165px}
+}
+@media print{
+ body{background:#fff}
+ .wrap{border:0;margin:0;max-width:none;padding:8mm}
+ .actions,.note{display:none}
+ input,textarea{padding:0}
+ textarea{min-height:100px}
+ .section{break-inside:avoid}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="header">
-    <div class="right">المملكة العربية السعودية<br>وزارة التعليم<br>الإدارة العامة للتعليم بمنطقة الرياض</div>
-    <div class="logo">وزارة التعليم<small>Ministry of Education</small></div>
-    <div class="left">ثانوية حفصة بنت سيرين
-      <div class="header-line"><span>الفصل الدراسي:</span><span class="dots"></span></div>
-      <div class="header-line"><span>العام:</span><span class="dots"></span><span>14هـ</span></div>
+    <div class="right">
+      المملكة العربية السعودية<br>
+      وزارة التعليم<br>
+      الإدارة العامة للتعليم بمنطقة الرياض
+    </div>
+
+    <div class="logo">
+      وزارة التعليم
+      <small>Ministry of Education</small>
+    </div>
+
+    <div class="left">
+      ثانوية حفصة بنت سيرين
+      <div class="header-row">
+        <span>الفصل الدراسي:</span>
+        <input id="term" placeholder="اكتبي الفصل">
+      </div>
+      <div class="header-row">
+        <span>العام:</span>
+        <input id="year" placeholder="مثال: 1448هـ">
+      </div>
     </div>
   </div>
+
   <div class="title">نموذج تنفيذ مجتمع التعلم المهني</div>
-  <div class="section"><h2>أولًا: بيانات الجلسة</h2><table>
-    <tr><td class="label">موضوع مجتمع التعلم</td><td><input id="topic"></td></tr>
-    <tr><td class="label">المجال</td><td><input id="field"></td></tr>
-    <tr><td class="label">اسم المعلمة المنفذة</td><td><input id="teacher"></td></tr>
-    <tr><td class="label">مقر التنفيذ</td><td><input id="place"></td></tr>
-    <tr><td class="label">اليوم والتاريخ</td><td><input id="date"></td></tr>
-  </table></div>
-  <div class="section big"><h2>ثانيًا: أهداف مجتمع التعلم</h2><textarea id="goals"></textarea></div>
-  <div class="section big"><h2>ثالثًا: أبرز ما تم مناقشته</h2><textarea id="discussion"></textarea></div>
-  <div class="section big"><h2>رابعًا: النتائج والتوصيات</h2><textarea id="results"></textarea></div>
-  <div class="section"><h2>خامسًا: الحاضرات</h2><table class="attendees"><thead><tr><th style="width:52px">م</th><th>الاسم الرباعي</th><th>التخصص</th><th>التوقيع</th></tr></thead><tbody>
-<tr><td>1</td><td><input id="a_name_1"></td><td><input id="a_spec_1"></td><td><input id="a_sig_1"></td></tr>
-<tr><td>2</td><td><input id="a_name_2"></td><td><input id="a_spec_2"></td><td><input id="a_sig_2"></td></tr>
-<tr><td>3</td><td><input id="a_name_3"></td><td><input id="a_spec_3"></td><td><input id="a_sig_3"></td></tr>
-<tr><td>4</td><td><input id="a_name_4"></td><td><input id="a_spec_4"></td><td><input id="a_sig_4"></td></tr>
-<tr><td>5</td><td><input id="a_name_5"></td><td><input id="a_spec_5"></td><td><input id="a_sig_5"></td></tr>
-<tr><td>6</td><td><input id="a_name_6"></td><td><input id="a_spec_6"></td><td><input id="a_sig_6"></td></tr>
-<tr><td>7</td><td><input id="a_name_7"></td><td><input id="a_spec_7"></td><td><input id="a_sig_7"></td></tr>
-<tr><td>8</td><td><input id="a_name_8"></td><td><input id="a_spec_8"></td><td><input id="a_sig_8"></td></tr>
-<tr><td>9</td><td><input id="a_name_9"></td><td><input id="a_spec_9"></td><td><input id="a_sig_9"></td></tr>
-<tr><td>10</td><td><input id="a_name_10"></td><td><input id="a_spec_10"></td><td><input id="a_sig_10"></td></tr>
-  </tbody></table></div>
-  <div class="section"><h2>سادسًا: اعتماد التنفيذ</h2><div class="approval">
-    <div class="sig">توقيع المعلمة المنفذة<input id="execsig"></div><div class="stamp">الختم</div><div class="sig">مديرة المدرسة<br>هيفاء المعمر<input id="mgrsig"></div>
-  </div></div>
-  <div class="footer"><span>أعدته: ف/ الثنيان</span><span>مستمرون في التطوير.. لصناعة فرق في تعلم طالباتنا</span></div>
-  <div class="actions"><button class="btn primary" onclick="window.print()">طباعة / حفظ PDF</button><button class="btn secondary" onclick="saveNow()">حفظ البيانات على الجهاز</button><button class="btn danger" onclick="clearAll()">مسح البيانات</button></div>
+
+  <div class="section">
+    <h2>أولًا: بيانات الجلسة</h2>
+    <table>
+      <tr><td class="label">موضوع مجتمع التعلم</td><td><input id="topic"></td></tr>
+      <tr><td class="label">المجال</td><td><input id="field"></td></tr>
+      <tr><td class="label">اسم المعلمة المنفذة</td><td><input id="teacher"></td></tr>
+      <tr><td class="label">مقر التنفيذ</td><td><input id="place"></td></tr>
+      <tr><td class="label">اليوم والتاريخ</td><td><input id="date"></td></tr>
+    </table>
+  </div>
+
+  <div class="section big">
+    <h2>ثانيًا: أهداف مجتمع التعلم</h2>
+    <textarea id="goals"></textarea>
+  </div>
+
+  <div class="section big">
+    <h2>ثالثًا: أبرز ما تم مناقشته</h2>
+    <textarea id="discussion"></textarea>
+  </div>
+
+  <div class="section big">
+    <h2>رابعًا: النتائج والتوصيات</h2>
+    <textarea id="results"></textarea>
+  </div>
+
+  <div class="section">
+    <h2>خامسًا: الحاضرات</h2>
+    <table class="attendees">
+      <thead>
+        <tr>
+          <th style="width:52px">م</th>
+          <th>اسم المعلمة</th>
+          <th>التخصص</th>
+          <th>التوقيع</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td><input id="a_name_1"></td><td><input id="a_spec_1"></td><td><input id="a_sig_1"></td></tr>
+        <tr><td>2</td><td><input id="a_name_2"></td><td><input id="a_spec_2"></td><td><input id="a_sig_2"></td></tr>
+        <tr><td>3</td><td><input id="a_name_3"></td><td><input id="a_spec_3"></td><td><input id="a_sig_3"></td></tr>
+        <tr><td>4</td><td><input id="a_name_4"></td><td><input id="a_spec_4"></td><td><input id="a_sig_4"></td></tr>
+        <tr><td>5</td><td><input id="a_name_5"></td><td><input id="a_spec_5"></td><td><input id="a_sig_5"></td></tr>
+        <tr><td>6</td><td><input id="a_name_6"></td><td><input id="a_spec_6"></td><td><input id="a_sig_6"></td></tr>
+        <tr><td>7</td><td><input id="a_name_7"></td><td><input id="a_spec_7"></td><td><input id="a_sig_7"></td></tr>
+        <tr><td>8</td><td><input id="a_name_8"></td><td><input id="a_spec_8"></td><td><input id="a_sig_8"></td></tr>
+        <tr><td>9</td><td><input id="a_name_9"></td><td><input id="a_spec_9"></td><td><input id="a_sig_9"></td></tr>
+        <tr><td>10</td><td><input id="a_name_10"></td><td><input id="a_spec_10"></td><td><input id="a_sig_10"></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>سادسًا: اعتماد التنفيذ</h2>
+    <div class="approval">
+      <div class="sig">توقيع المعلمة المنفذة<input id="execsig"></div>
+      <div class="stamp">الختم</div>
+      <div class="sig">مديرة المدرسة<br>هيفاء المعمر<input id="mgrsig"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>إعداد/ د. فاطمة الثنيان</span>
+    <span>مستمرون في التطوير.. لصناعة فرق في تعلم طالباتنا</span>
+  </div>
+
+  <div class="actions">
+    <button class="btn primary" onclick="window.print()">طباعة / حفظ PDF</button>
+    <button class="btn secondary" onclick="saveNow()">حفظ البيانات على الجهاز</button>
+    <button class="btn danger" onclick="clearAll()">مسح البيانات</button>
+  </div>
   <div class="note">يحفظ النموذج البيانات محليًا على نفس الجهاز والمتصفح فقط.</div>
 </div>
+
 <script>
-const ids=["topic","field","teacher","place","date","goals","discussion","results","execsig","mgrsig"];
-for(let i=1;i<=10;i++){ids.push(`a_name_${i}`,`a_spec_${i}`,`a_sig_${i}`)}
-function saveNow(){const d={};ids.forEach(id=>{const e=document.getElementById(id);if(e)d[id]=e.value});localStorage.setItem("plc_form_hafsa",JSON.stringify(d));alert("تم حفظ البيانات على هذا الجهاز.")}
-function restore(){try{const d=JSON.parse(localStorage.getItem("plc_form_hafsa")||"{}");ids.forEach(id=>{const e=document.getElementById(id);if(e&&d[id]!==undefined)e.value=d[id]})}catch(e){}}
-function clearAll(){if(confirm("هل تريدين مسح جميع البيانات من النموذج؟")){localStorage.removeItem("plc_form_hafsa");ids.forEach(id=>{const e=document.getElementById(id);if(e)e.value=""})}}
-ids.forEach(id=>{const e=document.getElementById(id);if(e)e.addEventListener("input",()=>{const d={};ids.forEach(x=>{const q=document.getElementById(x);if(q)d[x]=q.value});localStorage.setItem("plc_form_hafsa",JSON.stringify(d))})});restore();
+const ids=["term","year","topic","field","teacher","place","date","goals","discussion","results","execsig","mgrsig",
+"a_name_1","a_spec_1","a_sig_1","a_name_2","a_spec_2","a_sig_2","a_name_3","a_spec_3","a_sig_3","a_name_4","a_spec_4","a_sig_4","a_name_5","a_spec_5","a_sig_5",
+"a_name_6","a_spec_6","a_sig_6","a_name_7","a_spec_7","a_sig_7","a_name_8","a_spec_8","a_sig_8","a_name_9","a_spec_9","a_sig_9","a_name_10","a_spec_10","a_sig_10"];
+
+function persist(){
+ const d={};
+ ids.forEach(id=>{const e=document.getElementById(id); if(e)d[id]=e.value});
+ localStorage.setItem("plc_form_hafsa",JSON.stringify(d));
+}
+function saveNow(){persist(); alert("تم حفظ البيانات على هذا الجهاز.");}
+function restore(){
+ try{
+  const d=JSON.parse(localStorage.getItem("plc_form_hafsa")||"{}");
+  ids.forEach(id=>{const e=document.getElementById(id); if(e && d[id]!==undefined)e.value=d[id]});
+ }catch(e){}
+}
+function clearAll(){
+ if(confirm("هل تريدين مسح جميع البيانات من النموذج؟")){
+  localStorage.removeItem("plc_form_hafsa");
+  ids.forEach(id=>{const e=document.getElementById(id); if(e)e.value=""});
+ }
+}
+ids.forEach(id=>{
+ const e=document.getElementById(id);
+ if(e)e.addEventListener("input",persist);
+});
+restore();
 </script>
-</body></html>
+</body>
+</html>
