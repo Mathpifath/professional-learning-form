@@ -157,115 +157,198 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
 }
 
 /* الطباعة فقط */
+
 @media print{
-  @page{size:A4 portrait;margin:4mm}
+  @page{
+    size:A4 portrait;
+    margin:3mm;
+  }
+
   html,body{
-    width:210mm !important;
-    height:297mm !important;
     margin:0 !important;
     padding:0 !important;
+    width:204mm !important;
+    height:270mm !important;
+    max-height:270mm !important;
+    overflow:hidden !important;
     background:#fff !important;
     -webkit-print-color-adjust:exact !important;
     print-color-adjust:exact !important;
   }
-  body{font-size:7.5pt !important}
+
+  body{
+    font-size:9.2pt !important;
+  }
+
   .wrap{
-    width:202mm !important;
-    max-width:202mm !important;
-    margin:0 auto !important;
+    width:204mm !important;
+    max-width:204mm !important;
+    height:268mm !important;
+    max-height:268mm !important;
+    margin:0 !important;
     padding:0 !important;
     border:0 !important;
+    overflow:hidden !important;
   }
+
   .header{
-    grid-template-columns:1fr .85fr 1fr !important;
+    grid-template-columns:1fr .82fr 1fr !important;
     gap:3mm !important;
-    padding-bottom:1.5mm !important;
+    height:18mm !important;
+    min-height:18mm !important;
+    padding:1.5mm 1mm 1.8mm !important;
     border-bottom-width:1px !important;
   }
+
   .header .right,.header .left{
-    font-size:7.3pt !important;
-    line-height:1.2 !important;
+    font-size:8.6pt !important;
+    line-height:1.22 !important;
   }
+
   .header-row{gap:1mm !important}
+
   .header-row input{
-    width:24mm !important;
-    height:4mm !important;
-    font-size:7pt !important;
+    width:29mm !important;
+    height:4.5mm !important;
+    font-size:8.5pt !important;
     padding:0 !important;
   }
-  .logo{font-size:13pt !important;line-height:1 !important}
-  .logo small{font-size:5.8pt !important}
-  .title{
-    margin:1.5mm 0 1mm !important;
-    padding:1.6mm !important;
-    border-radius:2mm !important;
-    font-size:13pt !important;
+
+  .logo{
+    font-size:16pt !important;
     line-height:1 !important;
   }
+
+  .logo small{
+    font-size:6.5pt !important;
+  }
+
+  .title{
+    height:10mm !important;
+    margin:1.4mm 0 1mm !important;
+    padding:2mm !important;
+    border-radius:2.5mm !important;
+    font-size:16pt !important;
+    line-height:1 !important;
+  }
+
   .section{
     margin-top:1mm !important;
     border-radius:1.5mm !important;
     break-inside:avoid !important;
     page-break-inside:avoid !important;
   }
+
   .section h2{
-    padding:1mm 1.5mm !important;
-    font-size:8.6pt !important;
-    line-height:1 !important;
+    height:7mm !important;
+    padding:1.3mm 2mm !important;
+    font-size:10pt !important;
+    line-height:1.05 !important;
   }
-  table{table-layout:fixed !important}
+
+  /* بيانات الجلسة */
+  .section:first-of-type{
+    height:39mm !important;
+  }
+
+  table{
+    table-layout:fixed !important;
+  }
+
   td,th{
-    padding:.55mm .8mm !important;
-    font-size:7pt !important;
-    line-height:1 !important;
+    padding:.75mm 1mm !important;
+    font-size:8.6pt !important;
+    line-height:1.08 !important;
   }
-  .label{width:38mm !important}
+
+  .label{
+    width:39mm !important;
+  }
+
   input,textarea{
-    font-size:7pt !important;
-    padding:0 !important;
-    line-height:1 !important;
+    font-size:8.6pt !important;
+    padding:.3mm .6mm !important;
+    line-height:1.1 !important;
   }
+
+  /* خانات الأهداف والمناقشة والنتائج لتملأ الصفحة بشكل مريح */
+  .big{
+    height:31mm !important;
+  }
+
   .big textarea{
-    min-height:14mm !important;
-    height:14mm !important;
-    max-height:14mm !important;
+    display:block !important;
+    width:100% !important;
+    height:23.3mm !important;
+    min-height:23.3mm !important;
+    max-height:23.3mm !important;
     overflow:hidden !important;
     resize:none !important;
   }
-  .attendees th,.attendees td{
-    height:4.6mm !important;
-    padding:.2mm .6mm !important;
+
+  /* الحاضرات */
+  .attendees{
+    table-layout:fixed !important;
   }
+
+  .attendees th,.attendees td{
+    height:5mm !important;
+    padding:.25mm .7mm !important;
+  }
+
   .attendees input{
-    min-height:3mm !important;
-    height:3mm !important;
+    min-height:3.35mm !important;
+    height:3.35mm !important;
     padding:0 !important;
   }
+
+  .section:has(.attendees){
+    height:61mm !important;
+  }
+
+  /* الاعتماد */
   .approval{
-    grid-template-columns:1fr 26mm 1fr !important;
+    grid-template-columns:1fr 27mm 1fr !important;
     gap:1.5mm !important;
+    height:15mm !important;
+    min-height:15mm !important;
     padding:1.5mm !important;
   }
+
   .sig{
-    padding:.5mm !important;
-    font-size:7pt !important;
-    line-height:1 !important;
+    padding:.4mm !important;
+    font-size:8.5pt !important;
+    line-height:1.05 !important;
   }
+
   .sig input{
     margin-top:.7mm !important;
     height:3.5mm !important;
   }
+
   .stamp{
     border-radius:1.5mm !important;
-    font-size:7pt !important;
+    font-size:8.5pt !important;
   }
+
   .footer{
+    height:5mm !important;
     margin-top:1mm !important;
-    font-size:6.2pt !important;
+    padding:0 .5mm !important;
+    font-size:7.2pt !important;
     line-height:1 !important;
   }
-  .actions,.note{display:none !important}
+
+  .actions,.note{
+    display:none !important;
+  }
+
+  *{
+    box-sizing:border-box !important;
+    page-break-after:avoid !important;
+  }
 }
+
 </style>
 </head>
 
