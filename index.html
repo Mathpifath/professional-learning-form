@@ -158,194 +158,159 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
 
 /* الطباعة فقط */
 
+
 @media print{
-  @page{
-    size:A4 portrait;
-    margin:3mm;
-  }
+  @page{size:A4 portrait;margin:4mm}
 
   html,body{
-    margin:0 !important;
-    padding:0 !important;
-    width:204mm !important;
-    height:270mm !important;
-    max-height:270mm !important;
-    overflow:hidden !important;
-    background:#fff !important;
-    -webkit-print-color-adjust:exact !important;
-    print-color-adjust:exact !important;
+    margin:0!important;
+    padding:0!important;
+    width:auto!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:visible!important;
+    background:#fff!important;
+    -webkit-print-color-adjust:exact!important;
+    print-color-adjust:exact!important;
   }
 
-  body{
-    font-size:9.2pt !important;
-  }
+  body{font-size:9.8pt!important}
 
   .wrap{
-    width:204mm !important;
-    max-width:204mm !important;
-    height:268mm !important;
-    max-height:268mm !important;
-    margin:0 !important;
-    padding:0 !important;
-    border:0 !important;
-    overflow:hidden !important;
+    width:202mm!important;
+    max-width:202mm!important;
+    height:auto!important;
+    max-height:none!important;
+    margin:0 auto!important;
+    padding:0!important;
+    border:0!important;
+    overflow:visible!important;
   }
 
   .header{
-    grid-template-columns:1fr .82fr 1fr !important;
-    gap:3mm !important;
-    height:18mm !important;
-    min-height:18mm !important;
-    padding:1.5mm 1mm 1.8mm !important;
-    border-bottom-width:1px !important;
+    grid-template-columns:1fr .8fr 1fr!important;
+    gap:3.5mm!important;
+    padding:2mm 1mm 2.8mm!important;
+    border-bottom-width:1.2px!important;
   }
 
   .header .right,.header .left{
-    font-size:8.6pt !important;
-    line-height:1.22 !important;
+    font-size:9pt!important;
+    line-height:1.32!important;
   }
 
-  .header-row{gap:1mm !important}
+  .header-row{gap:1mm!important}
 
   .header-row input{
-    width:29mm !important;
-    height:4.5mm !important;
-    font-size:8.5pt !important;
-    padding:0 !important;
+    width:30mm!important;
+    height:4.8mm!important;
+    font-size:8.8pt!important;
+    padding:0!important;
   }
 
-  .logo{
-    font-size:16pt !important;
-    line-height:1 !important;
-  }
-
-  .logo small{
-    font-size:6.5pt !important;
-  }
+  .logo{font-size:18pt!important;line-height:1!important}
+  .logo small{font-size:7pt!important}
 
   .title{
-    height:10mm !important;
-    margin:1.4mm 0 1mm !important;
-    padding:2mm !important;
-    border-radius:2.5mm !important;
-    font-size:16pt !important;
-    line-height:1 !important;
+    margin:1.8mm 0 1.5mm!important;
+    padding:2.8mm!important;
+    border-radius:2.2mm!important;
+    font-size:18pt!important;
+    line-height:1!important;
   }
 
   .section{
-    margin-top:1mm !important;
-    border-radius:1.5mm !important;
-    break-inside:avoid !important;
-    page-break-inside:avoid !important;
+    margin-top:1.2mm!important;
+    border-radius:1.5mm!important;
+    break-inside:avoid!important;
+    page-break-inside:avoid!important;
   }
 
   .section h2{
-    height:7mm !important;
-    padding:1.3mm 2mm !important;
-    font-size:10pt !important;
-    line-height:1.05 !important;
+    padding:1.6mm 2.3mm!important;
+    font-size:10.4pt!important;
+    line-height:1.08!important;
   }
 
-  /* بيانات الجلسة */
-  .section:first-of-type{
-    height:39mm !important;
-  }
-
-  table{
-    table-layout:fixed !important;
-  }
+  table{table-layout:fixed!important}
 
   td,th{
-    padding:.75mm 1mm !important;
-    font-size:8.6pt !important;
-    line-height:1.08 !important;
+    padding:.9mm 1.1mm!important;
+    font-size:8.8pt!important;
+    line-height:1.12!important;
   }
 
-  .label{
-    width:39mm !important;
-  }
+  .label{width:38mm!important}
 
   input,textarea{
-    font-size:8.6pt !important;
-    padding:.3mm .6mm !important;
-    line-height:1.1 !important;
+    font-size:8.8pt!important;
+    padding:.5mm .8mm!important;
+    line-height:1.12!important;
   }
 
-  /* خانات الأهداف والمناقشة والنتائج لتملأ الصفحة بشكل مريح */
   .big{
-    height:31mm !important;
+    height:27mm!important;
   }
 
   .big textarea{
-    display:block !important;
-    width:100% !important;
-    height:23.3mm !important;
-    min-height:23.3mm !important;
-    max-height:23.3mm !important;
-    overflow:hidden !important;
-    resize:none !important;
+    display:block!important;
+    width:100%!important;
+    height:19.5mm!important;
+    min-height:19.5mm!important;
+    max-height:19.5mm!important;
+    overflow:hidden!important;
+    resize:none!important;
   }
 
-  /* الحاضرات */
-  .attendees{
-    table-layout:fixed !important;
-  }
+  .attendees{table-layout:fixed!important}
 
   .attendees th,.attendees td{
-    height:5mm !important;
-    padding:.25mm .7mm !important;
+    height:4.45mm!important;
+    padding:.2mm .65mm!important;
   }
 
   .attendees input{
-    min-height:3.35mm !important;
-    height:3.35mm !important;
-    padding:0 !important;
+    min-height:2.9mm!important;
+    height:2.9mm!important;
+    padding:0!important;
   }
 
-  .section:has(.attendees){
-    height:61mm !important;
-  }
-
-  /* الاعتماد */
   .approval{
-    grid-template-columns:1fr 27mm 1fr !important;
-    gap:1.5mm !important;
-    height:15mm !important;
-    min-height:15mm !important;
-    padding:1.5mm !important;
+    grid-template-columns:1fr 27mm 1fr!important;
+    gap:2mm!important;
+    min-height:14mm!important;
+    padding:1.8mm!important;
   }
 
   .sig{
-    padding:.4mm !important;
-    font-size:8.5pt !important;
-    line-height:1.05 !important;
+    padding:.3mm!important;
+    font-size:8.4pt!important;
+    line-height:1.05!important;
   }
 
   .sig input{
-    margin-top:.7mm !important;
-    height:3.5mm !important;
+    margin-top:.6mm!important;
+    height:3.4mm!important;
   }
 
   .stamp{
-    border-radius:1.5mm !important;
-    font-size:8.5pt !important;
+    border-radius:1.5mm!important;
+    font-size:8.4pt!important;
   }
 
   .footer{
-    height:5mm !important;
-    margin-top:1mm !important;
-    padding:0 .5mm !important;
-    font-size:7.2pt !important;
-    line-height:1 !important;
+    margin-top:1.2mm!important;
+    padding:0 .5mm!important;
+    font-size:7.2pt!important;
+    line-height:1!important;
   }
 
-  .actions,.note{
-    display:none !important;
-  }
+  .actions,.note{display:none!important}
 
-  *{
-    box-sizing:border-box !important;
-    page-break-after:avoid !important;
+  .footer,.section:last-of-type{
+    break-after:avoid-page!important;
+    page-break-after:avoid!important;
   }
 }
 
