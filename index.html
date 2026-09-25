@@ -169,25 +169,41 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
 
 
 @media print{
-  @page{size:A4 portrait;margin:4mm}
+  @page{size:A4 portrait;margin:3mm}
   html,body{margin:0!important;padding:0!important;background:#fff!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
   body{font-size:9.8pt!important}
-  .wrap{width:202mm!important;max-width:202mm!important;margin:0 auto!important;padding:0!important;border:0!important;overflow:visible!important}
-  .header{grid-template-columns:1fr .8fr 1fr!important;gap:3.5mm!important;padding:2mm 1mm 2.8mm!important;border-bottom-width:1.2px!important}
+  .wrap{width:204mm!important;max-width:204mm!important;margin:0 auto!important;padding:0!important;border:0!important;overflow:visible!important}
+  .header{grid-template-columns:1fr .8fr 1fr!important;gap:3.5mm!important;padding:1.5mm 1mm 1.8mm!important;border-bottom-width:1.2px!important}
   .header .right,.header .left{font-size:9pt!important;line-height:1.32!important}
   .header-row{gap:1mm!important}.header-row input{width:30mm!important;height:4.8mm!important;font-size:8.8pt!important;padding:0!important}
   .logo{font-size:18pt!important;line-height:1!important}.logo small{font-size:7pt!important}
-  .title{margin:1.4mm 0 1.1mm!important;padding:2.4mm!important;border-radius:2.2mm!important;font-size:18pt!important;line-height:1!important}
+  .title{margin:.9mm 0 .7mm!important;padding:1.9mm!important;border-radius:2.2mm!important;font-size:18pt!important;line-height:1!important}
   .section{margin-top:.7mm!important;border-radius:1.5mm!important;break-inside:avoid!important;page-break-inside:avoid!important}
-  .section h2{padding:1.3mm 2.1mm!important;font-size:10.2pt!important;line-height:1.08!important}
-  table{table-layout:fixed!important} td,th{padding:.9mm 1.05mm!important;font-size:8.9pt!important;line-height:1.14!important}
-  .label{width:37mm!important} input,textarea{font-size:9pt!important;padding:.5mm .8mm!important;line-height:1.15!important}
+  .section h2{padding:1.05mm 1.9mm!important;font-size:10.2pt!important;line-height:1.08!important}
+  table{table-layout:fixed!important} td,th{padding:.7mm .9mm!important;font-size:8.9pt!important;line-height:1.14!important}
+  .label{width:37mm!important} input,textarea{font-size:9.2pt!important;padding:.45mm .75mm!important;line-height:1.12!important}
+  .bullet-list{padding:.45mm .7mm!important}
+  .bullet-row{
+    grid-template-columns:5.5mm 1fr!important;
+    gap:.6mm!important;
+    min-height:5.4mm!important;
+    height:5.4mm!important;
+    border-bottom:1px dotted #b7cfdf!important;
+  }
+  .bullet-row input{
+    height:4.5mm!important;
+    min-height:4.5mm!important;
+    font-size:9.2pt!important;
+    padding:.2mm .35mm!important;
+    line-height:1!important;
+  }
+  .bullet-num{font-size:8.6pt!important;line-height:1!important}
   .big{height:34mm!important}.big textarea{display:block!important;width:100%!important;height:26mm!important;min-height:26mm!important;max-height:26mm!important;overflow:hidden!important;resize:none!important}
   .results-block{height:32mm!important}.results-block textarea{height:24mm!important;min-height:24mm!important;max-height:24mm!important}
   .attendees-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:1mm!important;padding:.8mm!important}.attendees-title{font-size:7pt!important;margin:0 0 .3mm 0!important}
-  .attendees th,.attendees td{height:4.3mm!important;padding:.15mm .45mm!important;font-size:7.6pt!important;line-height:1!important}.attendees input{min-height:2.8mm!important;height:2.8mm!important;padding:0!important}
-  .approval{grid-template-columns:1fr 28mm 1fr!important;gap:2mm!important;min-height:13mm!important;padding:1.5mm!important}.sig,.stamp{font-size:8.8pt!important}.sig input{height:4mm!important;margin-top:.6mm!important}
-  .footer{margin-top:1mm!important;font-size:7.4pt!important}.actions,.note{display:none!important}
+  .attendees th,.attendees td{height:4.05mm!important;padding:.15mm .45mm!important;font-size:7.6pt!important;line-height:1!important}.attendees input{min-height:2.8mm!important;height:2.8mm!important;padding:0!important}
+  .approval{grid-template-columns:1fr 27mm 1fr!important;gap:1.5mm!important;min-height:11.5mm!important;padding:1.1mm!important}.sig,.stamp{font-size:8.8pt!important}.sig input{height:4mm!important;margin-top:.6mm!important}
+  .footer{margin-top:.6mm!important;font-size:7.4pt!important}.actions,.note{display:none!important}
 }
 </style>
 </head>
