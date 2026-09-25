@@ -98,7 +98,7 @@ input,textarea{
 textarea{min-height:120px;resize:vertical;line-height:1.8}
 .big textarea{min-height:145px}
 .attendees input{text-align:center;min-height:30px}
-.dual-block{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dual-block .section{margin-top:14px}.attendees-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
+.dual-block{display:block}.dual-block .section{margin-top:14px}.attendees-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
 .attendees-title{text-align:center;font-weight:700;color:#0d3b66;margin-bottom:6px}
 .approval{
   display:grid;
@@ -164,31 +164,37 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
 @media print{
   @page{size:A4 portrait;margin:2.5mm}
   html,body{margin:0!important;padding:0!important;background:#fff!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
-  body{font-size:10.6pt!important}
-  .wrap{width:205mm!important;max-width:205mm!important;margin:0 auto!important;padding:0!important;border:0!important}
-  .header{grid-template-columns:1fr .72fr 1fr!important;gap:2.2mm!important;padding:1.2mm .8mm 1.5mm!important;border-bottom-width:1px!important}
-  .header .right,.header .left{font-size:9.4pt!important;line-height:1.2!important}
-  .header-row{gap:.7mm!important}
-  .header-row input{width:31mm!important;height:4.5mm!important;font-size:9.8pt!important;padding:0!important}
-  .logo{font-size:17pt!important;line-height:1!important}.logo small{font-size:6.8pt!important}
-  .title{margin:.9mm 0 .6mm!important;padding:1.8mm!important;border-radius:1.8mm!important;font-size:17pt!important;line-height:1!important}
-  .section{margin-top:.6mm!important;border-radius:1.3mm!important;break-inside:avoid!important}
-  .section h2{padding:1.05mm 1.8mm!important;font-size:10.8pt!important;line-height:1.05!important}
+  body{font-size:10.8pt!important}
+  .wrap{width:205mm!important;max-width:205mm!important;margin:0 auto!important;padding:0!important;border:0!important;overflow:visible!important}
+  .header{grid-template-columns:1fr .75fr 1fr!important;gap:2.4mm!important;padding:1.4mm 1mm 1.8mm!important;border-bottom-width:1.1px!important}
+  .header .right,.header .left{font-size:9.6pt!important;line-height:1.24!important}
+  .header-row{gap:.8mm!important}
+  .header-row input{width:32mm!important;height:4.8mm!important;font-size:9.8pt!important;padding:0!important}
+  .logo{font-size:18pt!important;line-height:1!important}.logo small{font-size:7pt!important}
+  .title{margin:1mm 0 .7mm!important;padding:2mm!important;border-radius:1.8mm!important;font-size:18pt!important;line-height:1!important}
+  .section{margin-top:.7mm!important;border-radius:1.4mm!important;break-inside:avoid!important;page-break-inside:avoid!important}
+  .section h2{padding:1.15mm 2mm!important;font-size:11pt!important;line-height:1.05!important}
   table{table-layout:fixed!important}
-  td,th{padding:.7mm .9mm!important;font-size:9.5pt!important;line-height:1.1!important}
-  .label{width:34mm!important}
-  input,textarea{font-size:9.8pt!important;padding:.35mm .6mm!important;line-height:1.12!important}
-  .dual-block{grid-template-columns:1fr 1fr!important;gap:1mm!important}.dual-block .section{margin-top:.6mm!important}
-  .big{height:35mm!important}.big textarea{display:block!important;width:100%!important;height:27mm!important;min-height:27mm!important;max-height:27mm!important;overflow:hidden!important;resize:none!important}
-  .results-block{height:31mm!important}.results-block textarea{height:23mm!important;min-height:23mm!important;max-height:23mm!important}
+  td,th{padding:.85mm 1mm!important;font-size:9.5pt!important;line-height:1.12!important}
+  .label{width:38mm!important}
+  input,textarea{font-size:10pt!important;padding:.45mm .7mm!important;line-height:1.15!important}
+  .dual-block{display:block!important}
+  .dual-block .section{margin-top:.7mm!important}
+  .big{height:39mm!important}
+  .big textarea{display:block!important;width:100%!important;height:31mm!important;min-height:31mm!important;max-height:31mm!important;overflow:hidden!important;resize:none!important}
+  .results-block{height:36mm!important}
+  .results-block textarea{height:28mm!important;min-height:28mm!important;max-height:28mm!important}
   .attendees-grid{grid-template-columns:1fr 1fr!important;gap:1mm!important;padding:.8mm!important}
-  .attendees-title{font-size:8pt!important;margin:0 0 .35mm 0!important}
-  .attendees th,.attendees td{height:5mm!important;padding:.2mm .5mm!important;font-size:8.4pt!important;line-height:1!important}
-  .attendees input{height:3.2mm!important;min-height:3.2mm!important;padding:0!important}
-  .approval{grid-template-columns:1fr 26mm 1fr!important;gap:1.5mm!important;min-height:12mm!important;padding:1.2mm!important}
-  .sig,.stamp{font-size:8.8pt!important}.sig input{margin-top:.35mm!important;height:3.4mm!important}
-  .footer{margin-top:.7mm!important;font-size:7.6pt!important;line-height:1!important}
+  .attendees-title{font-size:8.2pt!important;margin:0 0 .4mm 0!important}
+  .attendees th,.attendees td{height:4.8mm!important;padding:.2mm .5mm!important;font-size:8.5pt!important;line-height:1!important}
+  .attendees input{min-height:3mm!important;height:3mm!important;padding:0!important}
+  .approval{grid-template-columns:1fr 27mm 1fr!important;gap:1.7mm!important;min-height:12mm!important;padding:1.2mm!important}
+  .sig{padding:.25mm!important;font-size:9pt!important;line-height:1.04!important}
+  .sig input{margin-top:.4mm!important;height:3.5mm!important}
+  .stamp{border-radius:1.4mm!important;font-size:9pt!important}
+  .footer{margin-top:.7mm!important;padding:0 .4mm!important;font-size:7.6pt!important;line-height:1!important}
   .actions,.note{display:none!important}
+  .footer,.section:last-of-type{break-after:avoid-page!important;page-break-after:avoid!important}
 }
 
 </style>
