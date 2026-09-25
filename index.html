@@ -98,7 +98,7 @@ input,textarea{
 textarea{min-height:120px;resize:vertical;line-height:1.8}
 .big textarea{min-height:145px}
 .attendees input{text-align:center;min-height:30px}
-.attendees-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
+.dual-block{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dual-block .section{margin-top:14px}.attendees-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
 .attendees-title{text-align:center;font-weight:700;color:#0d3b66;margin-bottom:6px}
 .approval{
   display:grid;
@@ -162,88 +162,33 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
 
 
 @media print{
-  @page{size:A4 portrait;margin:3mm}
-
-  html,body{
-    margin:0!important;
-    padding:0!important;
-    width:auto!important;
-    height:auto!important;
-    min-height:0!important;
-    max-height:none!important;
-    overflow:visible!important;
-    background:#fff!important;
-    -webkit-print-color-adjust:exact!important;
-    print-color-adjust:exact!important;
-  }
-
-  body{font-size:10pt!important}
-
-  .wrap{
-    width:204mm!important;
-    max-width:204mm!important;
-    height:auto!important;
-    max-height:none!important;
-    margin:0 auto!important;
-    padding:0!important;
-    border:0!important;
-    overflow:visible!important;
-  }
-
-  .header{
-    grid-template-columns:1fr .82fr 1fr!important;
-    gap:2.8mm!important;
-    padding:1.6mm 1mm 2.1mm!important;
-    border-bottom-width:1.1px!important;
-  }
-
-  .header .right,.header .left{font-size:9.4pt!important;line-height:1.28!important}
-  .header-row{gap:.9mm!important}
-  .header-row input{width:31mm!important;height:4.8mm!important;font-size:9.2pt!important;padding:0!important}
-  .logo{font-size:18.5pt!important;line-height:1!important}
-  .logo small{font-size:7.2pt!important}
-
-  .title{
-    margin:1.2mm 0 .9mm!important;
-    padding:2.2mm!important;
-    border-radius:2mm!important;
-    font-size:18.5pt!important;
-    line-height:1!important;
-  }
-
-  .section{
-    margin-top:.75mm!important;
-    border-radius:1.4mm!important;
-    break-inside:avoid!important;
-    page-break-inside:avoid!important;
-  }
-
-  .section h2{padding:1.15mm 2mm!important;font-size:10.6pt!important;line-height:1.06!important}
+  @page{size:A4 portrait;margin:2.5mm}
+  html,body{margin:0!important;padding:0!important;background:#fff!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  body{font-size:10.6pt!important}
+  .wrap{width:205mm!important;max-width:205mm!important;margin:0 auto!important;padding:0!important;border:0!important}
+  .header{grid-template-columns:1fr .72fr 1fr!important;gap:2.2mm!important;padding:1.2mm .8mm 1.5mm!important;border-bottom-width:1px!important}
+  .header .right,.header .left{font-size:9.4pt!important;line-height:1.2!important}
+  .header-row{gap:.7mm!important}
+  .header-row input{width:31mm!important;height:4.5mm!important;font-size:9.8pt!important;padding:0!important}
+  .logo{font-size:17pt!important;line-height:1!important}.logo small{font-size:6.8pt!important}
+  .title{margin:.9mm 0 .6mm!important;padding:1.8mm!important;border-radius:1.8mm!important;font-size:17pt!important;line-height:1!important}
+  .section{margin-top:.6mm!important;border-radius:1.3mm!important;break-inside:avoid!important}
+  .section h2{padding:1.05mm 1.8mm!important;font-size:10.8pt!important;line-height:1.05!important}
   table{table-layout:fixed!important}
-  td,th{padding:.85mm 1mm!important;font-size:9.2pt!important;line-height:1.12!important}
-  .label{width:40mm!important}
-  input,textarea{font-size:9.2pt!important;padding:.4mm .7mm!important;line-height:1.1!important}
-
-  .big{height:28mm!important}
-  .big textarea{
-    display:block!important;width:100%!important;height:20.5mm!important;min-height:20.5mm!important;max-height:20.5mm!important;
-    overflow:hidden!important;resize:none!important;
-  }
-
-  .attendees-grid{grid-template-columns:1fr 1fr!important;gap:1.2mm!important;padding:.9mm!important}
-  .attendees-title{font-size:7.4pt!important;margin:0 0 .45mm 0!important}
-  .attendees{table-layout:fixed!important}
-  .attendees th,.attendees td{height:4.7mm!important;padding:.2mm .55mm!important;font-size:8.2pt!important;line-height:1!important}
-  .attendees input{min-height:2.8mm!important;height:2.8mm!important;padding:0!important}
-
-  .approval{grid-template-columns:1fr 27mm 1fr!important;gap:1.8mm!important;min-height:12.5mm!important;padding:1.4mm!important}
-  .sig{padding:.25mm!important;font-size:8.8pt!important;line-height:1.04!important}
-  .sig input{margin-top:.45mm!important;height:3.5mm!important}
-  .stamp{border-radius:1.4mm!important;font-size:8.8pt!important}
-  .footer{margin-top:.9mm!important;padding:0 .4mm!important;font-size:7.4pt!important;line-height:1!important}
-
+  td,th{padding:.7mm .9mm!important;font-size:9.5pt!important;line-height:1.1!important}
+  .label{width:34mm!important}
+  input,textarea{font-size:9.8pt!important;padding:.35mm .6mm!important;line-height:1.12!important}
+  .dual-block{grid-template-columns:1fr 1fr!important;gap:1mm!important}.dual-block .section{margin-top:.6mm!important}
+  .big{height:35mm!important}.big textarea{display:block!important;width:100%!important;height:27mm!important;min-height:27mm!important;max-height:27mm!important;overflow:hidden!important;resize:none!important}
+  .results-block{height:31mm!important}.results-block textarea{height:23mm!important;min-height:23mm!important;max-height:23mm!important}
+  .attendees-grid{grid-template-columns:1fr 1fr!important;gap:1mm!important;padding:.8mm!important}
+  .attendees-title{font-size:8pt!important;margin:0 0 .35mm 0!important}
+  .attendees th,.attendees td{height:5mm!important;padding:.2mm .5mm!important;font-size:8.4pt!important;line-height:1!important}
+  .attendees input{height:3.2mm!important;min-height:3.2mm!important;padding:0!important}
+  .approval{grid-template-columns:1fr 26mm 1fr!important;gap:1.5mm!important;min-height:12mm!important;padding:1.2mm!important}
+  .sig,.stamp{font-size:8.8pt!important}.sig input{margin-top:.35mm!important;height:3.4mm!important}
+  .footer{margin-top:.7mm!important;font-size:7.6pt!important;line-height:1!important}
   .actions,.note{display:none!important}
-  .footer,.section:last-of-type{break-after:avoid-page!important;page-break-after:avoid!important}
 }
 
 </style>
@@ -281,25 +226,30 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
   <div class="section">
     <h2>أولًا: بيانات الجلسة</h2>
     <table>
-      <tr><td class="label">موضوع مجتمع التعلم</td><td><input id="topic"></td></tr>
-      <tr><td class="label">المجال</td><td><input id="field"></td></tr>
-      <tr><td class="label">اسم المعلمة المنفذة</td><td><input id="teacher"></td></tr>
-      <tr><td class="label">مقر التنفيذ</td><td><input id="place"></td></tr>
-      <tr><td class="label">اليوم والتاريخ</td><td><input id="date"></td></tr>
+      <tr>
+        <td class="label">موضوع مجتمع التعلم</td><td><input id="topic"></td>
+        <td class="label">المجال</td><td><input id="field"></td>
+      </tr>
+      <tr>
+        <td class="label">اسم المعلمة المنفذة</td><td><input id="teacher"></td>
+        <td class="label">مقر التنفيذ</td><td><input id="place"></td>
+      </tr>
+      <tr><td class="label">اليوم والتاريخ</td><td colspan="3"><input id="date"></td></tr>
     </table>
   </div>
 
-  <div class="section big">
-    <h2>ثانيًا: أهداف مجتمع التعلم</h2>
-    <textarea id="goals"></textarea>
+  <div class="dual-block">
+    <div class="section big">
+      <h2>ثانيًا: أهداف مجتمع التعلم</h2>
+      <textarea id="goals"></textarea>
+    </div>
+    <div class="section big">
+      <h2>ثالثًا: أبرز ما تم مناقشته</h2>
+      <textarea id="discussion"></textarea>
+    </div>
   </div>
 
-  <div class="section big">
-    <h2>ثالثًا: أبرز ما تم مناقشته</h2>
-    <textarea id="discussion"></textarea>
-  </div>
-
-  <div class="section big">
+  <div class="section big results-block">
     <h2>رابعًا: النتائج والتوصيات</h2>
     <textarea id="results"></textarea>
   </div>
