@@ -100,6 +100,13 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
 .attendees input{text-align:center;min-height:30px}
 .attendees-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
 .attendees-title{text-align:center;font-weight:700;color:#0d3b66;margin-bottom:6px}
+
+.bullet-list{padding:6px 8px;background:#fff}
+.bullet-row{display:grid;grid-template-columns:26px 1fr;align-items:center;gap:6px;border-bottom:1px dotted #b7cfdf;min-height:34px}
+.bullet-row:last-child{border-bottom:0}
+.bullet-num{text-align:center;font-weight:700;color:#356b91}
+.bullet-row input{border:0!important;border-radius:0!important;padding:5px 4px!important;background:transparent!important}
+
 .approval{
   display:grid;
   grid-template-columns:1fr 180px 1fr;
@@ -230,19 +237,40 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
   </div>
 
   <div>
-    <div class="section big">
+    <div class="section">
       <h2>ثانيًا: أهداف مجتمع التعلم</h2>
-      <textarea id="goals"></textarea>
+      <div class="bullet-list">
+        <div class="bullet-row"><span class="bullet-num">1</span><input id="goals_1"></div>
+        <div class="bullet-row"><span class="bullet-num">2</span><input id="goals_2"></div>
+        <div class="bullet-row"><span class="bullet-num">3</span><input id="goals_3"></div>
+        <div class="bullet-row"><span class="bullet-num">4</span><input id="goals_4"></div>
+        <div class="bullet-row"><span class="bullet-num">5</span><input id="goals_5"></div>
+        <div class="bullet-row"><span class="bullet-num">6</span><input id="goals_6"></div>
+      </div>
     </div>
-    <div class="section big">
+    <div class="section">
       <h2>ثالثًا: أبرز ما تم مناقشته</h2>
-      <textarea id="discussion"></textarea>
+      <div class="bullet-list">
+        <div class="bullet-row"><span class="bullet-num">1</span><input id="discussion_1"></div>
+        <div class="bullet-row"><span class="bullet-num">2</span><input id="discussion_2"></div>
+        <div class="bullet-row"><span class="bullet-num">3</span><input id="discussion_3"></div>
+        <div class="bullet-row"><span class="bullet-num">4</span><input id="discussion_4"></div>
+        <div class="bullet-row"><span class="bullet-num">5</span><input id="discussion_5"></div>
+        <div class="bullet-row"><span class="bullet-num">6</span><input id="discussion_6"></div>
+      </div>
     </div>
   </div>
 
-  <div class="section big results-block">
+  <div class="section">
     <h2>رابعًا: النتائج والتوصيات</h2>
-    <textarea id="results"></textarea>
+    <div class="bullet-list">
+      <div class="bullet-row"><span class="bullet-num">1</span><input id="results_1"></div>
+      <div class="bullet-row"><span class="bullet-num">2</span><input id="results_2"></div>
+      <div class="bullet-row"><span class="bullet-num">3</span><input id="results_3"></div>
+      <div class="bullet-row"><span class="bullet-num">4</span><input id="results_4"></div>
+      <div class="bullet-row"><span class="bullet-num">5</span><input id="results_5"></div>
+      <div class="bullet-row"><span class="bullet-num">6</span><input id="results_6"></div>
+    </div>
   </div>
 
   <div class="section">
@@ -300,7 +328,7 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
 </div>
 
 <script>
-const ids=["term","year","topic","field","teacher","place","date","goals","discussion","results","execsig","mgrsig",
+const ids=["term","year","topic","field","teacher","place","date","goals_1","goals_2","goals_3","goals_4","goals_5","goals_6","discussion_1","discussion_2","discussion_3","discussion_4","discussion_5","discussion_6","results_1","results_2","results_3","results_4","results_5","results_6","execsig","mgrsig",
 "a_name_1","a_spec_1","a_sig_1","a_name_2","a_spec_2","a_sig_2","a_name_3","a_spec_3","a_sig_3",
 "a_name_4","a_spec_4","a_sig_4","a_name_5","a_spec_5","a_sig_5","a_name_6","a_spec_6","a_sig_6",
 "a_name_7","a_spec_7","a_sig_7","a_name_8","a_spec_8","a_sig_8","a_name_9","a_spec_9","a_sig_9",
