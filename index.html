@@ -101,7 +101,7 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
 .attendees-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
 .attendees-title{text-align:center;font-weight:700;color:#0d3b66;margin-bottom:6px}
 
-.bullet-list{padding:6px 8px;background:#fff}
+.bullet-list{padding:6px 8px;background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
 .bullet-row{display:grid;grid-template-columns:26px 1fr;align-items:center;gap:6px;border-bottom:1px dotted #b7cfdf;min-height:34px}
 .bullet-row:last-child{border-bottom:0}
 .bullet-num{text-align:center;font-weight:700;color:#356b91}
@@ -189,22 +189,27 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
   .section h2{padding:1.05mm 1.9mm!important;font-size:10.2pt!important;line-height:1.08!important}
   table{table-layout:fixed!important} td,th{padding:.8mm .95mm!important;font-size:9.2pt!important;line-height:1.14!important}
   .label{width:37mm!important} input,textarea{font-size:9.2pt!important;padding:.45mm .75mm!important;line-height:1.12!important}
-  .bullet-list{padding:.45mm .7mm!important}
+  .bullet-list{
+    padding:.6mm .8mm!important;
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:.45mm 1.3mm!important;
+  }
   .bullet-row{
-    grid-template-columns:5.5mm 1fr!important;
-    gap:.6mm!important;
-    min-height:8mm!important;
-    height:8mm!important;
+    grid-template-columns:5mm 1fr!important;
+    gap:.7mm!important;
+    min-height:8.8mm!important;
+    height:8.8mm!important;
     border-bottom:1px dotted #b7cfdf!important;
   }
   .bullet-row input{
-    height:6.8mm!important;
-    min-height:6.8mm!important;
-    font-size:9.6pt!important;
-    padding:.25mm .45mm!important;
+    height:7.5mm!important;
+    min-height:7.5mm!important;
+    font-size:10pt!important;
+    padding:.3mm .55mm!important;
     line-height:1!important;
   }
-  .bullet-num{font-size:9pt!important;line-height:1!important}
+  .bullet-num{font-size:9.4pt!important;line-height:1!important}
   .big{height:34mm!important}.big textarea{display:block!important;width:100%!important;height:26mm!important;min-height:26mm!important;max-height:26mm!important;overflow:hidden!important;resize:none!important}
   .results-block{height:32mm!important}.results-block textarea{height:24mm!important;min-height:24mm!important;max-height:24mm!important}
   .attendees-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:1.2mm!important;padding:1mm!important}
@@ -278,6 +283,9 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
         <div class="bullet-row"><span class="bullet-num">3</span><input id="goals_3"></div>
         <div class="bullet-row"><span class="bullet-num">4</span><input id="goals_4"></div>
         <div class="bullet-row"><span class="bullet-num">5</span><input id="goals_5"></div>
+        <div class="bullet-row"><span class="bullet-num">6</span><input id="goals_6"></div>
+        <div class="bullet-row"><span class="bullet-num">7</span><input id="goals_7"></div>
+        <div class="bullet-row"><span class="bullet-num">8</span><input id="goals_8"></div>
               </div>
     </div>
     <div class="section">
@@ -288,6 +296,9 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
         <div class="bullet-row"><span class="bullet-num">3</span><input id="discussion_3"></div>
         <div class="bullet-row"><span class="bullet-num">4</span><input id="discussion_4"></div>
         <div class="bullet-row"><span class="bullet-num">5</span><input id="discussion_5"></div>
+        <div class="bullet-row"><span class="bullet-num">6</span><input id="discussion_6"></div>
+        <div class="bullet-row"><span class="bullet-num">7</span><input id="discussion_7"></div>
+        <div class="bullet-row"><span class="bullet-num">8</span><input id="discussion_8"></div>
               </div>
     </div>
   </div>
@@ -300,6 +311,9 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
       <div class="bullet-row"><span class="bullet-num">3</span><input id="results_3"></div>
       <div class="bullet-row"><span class="bullet-num">4</span><input id="results_4"></div>
       <div class="bullet-row"><span class="bullet-num">5</span><input id="results_5"></div>
+      <div class="bullet-row"><span class="bullet-num">6</span><input id="results_6"></div>
+      <div class="bullet-row"><span class="bullet-num">7</span><input id="results_7"></div>
+      <div class="bullet-row"><span class="bullet-num">8</span><input id="results_8"></div>
           </div>
   </div>
 
@@ -358,7 +372,7 @@ textarea{min-height:120px;resize:vertical;line-height:1.8}
 </div>
 
 <script>
-const ids=["term","year","topic","field","teacher","place","date","goals_1","goals_2","goals_3","goals_4","goals_5","discussion_1","discussion_2","discussion_3","discussion_4","discussion_5","results_1","results_2","results_3","results_4","results_5","execsig","mgrsig",
+const ids=["term","year","topic","field","teacher","place","date","goals_1","goals_2","goals_3","goals_4","goals_5","goals_6","goals_7","goals_8","discussion_1","discussion_2","discussion_3","discussion_4","discussion_5","discussion_6","discussion_7","discussion_8","results_1","results_2","results_3","results_4","results_5","results_6","results_7","results_8","execsig","mgrsig",
 "a_name_1","a_spec_1","a_sig_1","a_name_2","a_spec_2","a_sig_2","a_name_3","a_spec_3","a_sig_3",
 "a_name_4","a_spec_4","a_sig_4","a_name_5","a_spec_5","a_sig_5","a_name_6","a_spec_6","a_sig_6",
 "a_name_7","a_spec_7","a_sig_7","a_name_8","a_spec_8","a_sig_8","a_name_9","a_spec_9","a_sig_9",
